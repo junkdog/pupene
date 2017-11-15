@@ -27,7 +27,7 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
 
 ### Links
 
-- Full API documentation, including this README: https://junkdog.github.io/pupene
+- Full API documentation, including this README: https://junkdog.github.io/pupene/index.html
 - Github repository: https://github.com/junkdog/pupene
 - Issues: https://github.com/junkdog/pupene/issues
 
