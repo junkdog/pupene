@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$structpupene_1_1detect_1_1is__map__impl.html" title="pupene::detect::is\l_map_impl\&lt; T, typename \&gt;" alt="" coords="142,5,325,47"/>
+<area shape="rect" id="node3" href="$structpupene_1_1detect_1_1is__pup__impl.html" title="pupene::detect::is\l_pup_impl\&lt; P, T, typename \&gt;" alt="" coords="136,71,331,112"/>
+<area shape="rect" id="node4" href="$structpupene_1_1is__detected.html" title="pupene::is_detected\l\&lt; Trait, Enabler, Args \&gt;" alt="" coords="154,136,313,177"/>
+</map>

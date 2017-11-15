@@ -1,0 +1,9 @@
+<map id="include/null&#45;pupper.h" name="include/null&#45;pupper.h">
+<area shape="rect" id="node2" href="$debug-pupper_8h.html" title="Introspect objects as they reach puppers. " alt="" coords="69,80,225,107"/>
+<area shape="rect" id="node3" href="$debug_8h.html" title="Introspection utilities. " alt="" coords="90,155,203,181"/>
+<area shape="rect" id="node4" href="$debug_8cpp.html" title="src/debug.cpp" alt="" coords="5,229,109,256"/>
+<area shape="rect" id="node5" href="$pupene_8h.html" title="Includes most headers except those related to JSON/optional support. " alt="" coords="133,379,253,405"/>
+<area shape="rect" id="node6" href="$util_8h.html" title="include/util.h" alt="" coords="194,229,289,256"/>
+<area shape="rect" id="node7" href="$binary_8h.html" title="Utility functions for serializing to/from binary. " alt="" coords="185,304,298,331"/>
+<area shape="rect" id="node8" href="$json_8h.html" title="Convert to/from JSON. " alt="" coords="322,304,425,331"/>
+</map>

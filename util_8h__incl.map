@@ -1,0 +1,10 @@
+<map id="include/util.h" name="include/util.h">
+<area shape="rect" id="node2" href="$debug_8h.html" title="Introspection utilities. " alt="" coords="159,80,227,107"/>
+<area shape="rect" id="node9" href="$pup_8h.html" title="Core pup functions for working with STL types. " alt="" coords="272,155,327,181"/>
+<area shape="rect" id="node3" href="$debug-pupper_8h.html" title="Introspect objects as they reach puppers. " alt="" coords="137,155,248,181"/>
+<area shape="rect" id="node4" href="$null-pupper_8h.html" title="NopPupper was also a tempting name. " alt="" coords="73,304,169,331"/>
+<area shape="rect" id="node5" href="$pupper_8h.html" title="Pupper base class. " alt="" coords="97,379,169,405"/>
+<area shape="rect" id="node6" href="$traits_8h.html" title="traits.h" alt="" coords="101,453,164,480"/>
+<area shape="rect" id="node10" href="$pup-core_8h.html" title="Helpers for writing pup functions. " alt="" coords="257,229,339,256"/>
+<area shape="rect" id="node11" href="$pup-pupper_8h.html" title="All functions pass their arguments directly to puppers. " alt="" coords="193,304,291,331"/>
+</map>

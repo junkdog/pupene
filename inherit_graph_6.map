@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classpupene_1_1Pupper.html" title="pupene::Pupper\&lt; DebugPupper\l\&lt; Wrapped \&gt; \&gt;" alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node2" href="$classpupene_1_1DebugPupper.html" title="This pupper wraps another pupper, logging each call to Wrapped::begin(), Wrapped::pup() and wrapped::..." alt="" coords="257,5,408,47"/>
+</map>
