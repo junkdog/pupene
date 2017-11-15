@@ -1,0 +1,1 @@
+Checks:          'clang-diagnostic-*,clang-analyzer-*,-*,clang-analyzer-*,bugprone-*,cppcoreguidelines-*,misc-*,modernize-*,performance-*,readability-*,-readability-braces-around-statements'
