@@ -25,7 +25,7 @@ namespace pupene {
 
     /**
      * @tparam Stream e.g. `std::istream`, `std::ostream`
-     * @tparam PupStream must provide a static function `pup(Stream, T)`
+     * @tparam PupStream must provide a static function `pup(Stream&, T&)`
      *
      * @see BinaryWriter
      * @see BinaryReader

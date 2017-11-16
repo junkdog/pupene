@@ -111,7 +111,7 @@ namespace pupene::fns {               // required namespace
              const Meta& meta) {      // metadata for color 
         
         // idiomatic boilerplate     
-        pup_object(p, v, meta, [&color](auto&& fpup) {
+        pup_object(p, color, meta, [&color](auto&& fpup) {
             fpup(color.r, "r");       // enumerate each field
             fpup(color.g, "g");
             fpup(color.b, "b");
@@ -124,7 +124,7 @@ namespace pupene::fns {               // required namespace
              FontReference& ref,    
              const Meta& meta) {    
         
-        pup_object(p, v, meta, [&ref](auto&& fpup) {
+        pup_object(p, ref, meta, [&ref](auto&& fpup) {
             fpup(ref.path,  "path");  
             fpup(ref.inner, "inner"); // dispatches to pup for Color
             fpup(ref.outer, "outer");
