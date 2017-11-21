@@ -23,6 +23,7 @@ set(sources
 )
 
 if (${PUPENE_BUILD_JSON})
+    find_package(nlohmann_json CONFIG REQUIRED)
     list(APPEND headers
         ${header_path}/json.h
         ${header_path}/json-puppers.h)
