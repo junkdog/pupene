@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <json-puppers.h>
+#include <binary-puppers.h>
 #include "traits.h"
 #include "specialized-pupper.h"
 
@@ -42,7 +42,7 @@ TEST(specialized_pupper_test, is_pup_impl_test) {
     >();
 
 
-    assert_pupper_pups<pupene::JsonWriter, float,
+    assert_pupper_pups<pupene::BinaryWriter, float,
             bool,
             short,
             uint64_t,

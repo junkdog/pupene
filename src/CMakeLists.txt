@@ -5,10 +5,10 @@ include_directories(${header_path})
 
 set(headers
     ${header_path}/pupene.h
+    ${header_path}/pupper.h
     ${header_path}/pup-pupper.h
     ${header_path}/pup-core.h
     ${header_path}/pup.h
-    ${header_path}/pupper.h
     ${header_path}/traits.h
     ${header_path}/null-pupper.h
     ${header_path}/debug-pupper.h
@@ -23,9 +23,6 @@ set(sources
 )
 
 if (${PUPENE_BUILD_JSON})
-    hunter_add_package(nlohmann_json)
-    find_package(nlohmann_json CONFIG REQUIRED)
-
     list(APPEND headers
         ${header_path}/json.h
         ${header_path}/json-puppers.h)
@@ -49,7 +46,7 @@ target_include_directories(
 )
 
 if (${PUPENE_BUILD_JSON})
-    target_link_libraries(pupene nlohmann_json)
+    target_link_libraries(pupene CONAN_PKG::jsonformoderncpp)
 endif(${PUPENE_BUILD_JSON})
 
 

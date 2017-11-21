@@ -9,18 +9,17 @@ MESSAGE(STATUS
     "CMAKE_BUILD_TYPE: "
     ${CMAKE_BUILD_TYPE})
 
-MESSAGE(STATUS
-    "CMAKE_INSTALL_PREFIX: "
-    ${CMAKE_INSTALL_PREFIX})
-
-### hunter init
-include("cmake/HunterGate.cmake")
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.19.99.tar.gz"
-    SHA1 "55ca271e9276b9973176e3f5a8c0d0dc25e46a53"
-)
-
 project(pupene VERSION 0.1.4)
+
+if (EXISTS ${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+    include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+    conan_basic_setup(TARGETS)
+else()
+    message(SEND_ERROR "missing conanbuildinfo.cmake: ")
+    message(SEND_ERROR "    conan install . --build=missing --install-folder=<BUILD_FOLDER>")
+endif()
+
+
 
 ### properties ###
 # auto-generated files
@@ -44,22 +43,31 @@ set(header_path "${pupene_SOURCE_DIR}/include")
 
 ### compiler settings ###
 set(CMAKE_CXX_STANDARD 17)
-add_compile_options(
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Wabstract-final-class
-    -Wabstract-vbase-init
-    -Wauto-import
-    -Wdouble-promotion
-    -Wfloat-conversion
-    -Wfloat-equal
-    -Wheader-hygiene
-    -Widiomatic-parentheses
-    -Wimplicit-fallthrough
-    -Winconsistent-missing-override
-    -fno-omit-frame-pointer
-)
+
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+    add_compile_options(
+        -Wall
+        -Wextra
+        -Wpedantic
+        -Wabstract-final-class
+        -Wabstract-vbase-init
+        -Wauto-import
+        -Wdouble-promotion
+        -Wfloat-conversion
+        -Wfloat-equal
+        -Wheader-hygiene
+        -Widiomatic-parentheses
+        -Wimplicit-fallthrough
+        -Winconsistent-missing-override
+        -fno-omit-frame-pointer
+    )
+else()
+    message(WARNING "missing compiler-specific options")
+    add_compile_options(
+        -std=c++1z
+        -fno-omit-frame-pointer
+    )
+endif()
 
 ### feature config
 include(FeatureSummary)

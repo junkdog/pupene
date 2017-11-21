@@ -25,27 +25,16 @@ set(sources
     specialized-pupper.cpp
 )
 
-hunter_add_package(GTest) # GTest::main
-hunter_add_package(glm)
-hunter_add_package(Boost COMPONENTS iostreams)
-
-find_package(glm REQUIRED)
-find_package(GTest CONFIG REQUIRED) # GTest::main
-find_package(Boost CONFIG REQUIRED iostreams)
-
 ### libraries to link, PUPENE_BUILD_JSON appends to list
 set(link_libraries
-    GTest::main
-    glm
-    Boost::iostreams
+    CONAN_PKG::gtest
+    CONAN_PKG::glm
+    CONAN_PKG::Boost
 )
 
 if (${PUPENE_BUILD_JSON})
-    hunter_add_package(nlohmann_json)
-    find_package(nlohmann_json CONFIG REQUIRED)
-
     list(APPEND link_libraries
-        nlohmann_json)
+        CONAN_PKG::jsonformoderncpp)
 
     list(APPEND headers
         ${header_path}/json.h
@@ -67,6 +56,6 @@ add_custom_target(valgrind
         --tool=memcheck
         --leak-check=full
         --num-callers=40
-        ./puptest --gtest_filter="*"
-    DEPENDS ./puptest
+        ${CMAKE_BINARY_DIR}/bin/puptest --gtest_filter="*"
+    DEPENDS puptest
 )

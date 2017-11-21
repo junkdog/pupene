@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include <nlohmann/json.hpp>
+#include <json.hpp>
 #include "pupper.h"
 
 using json = nlohmann::json;
@@ -108,10 +108,12 @@ namespace pupene {
             using Type = pupene::Meta::Type;
 
             if (!parent_is(Type::Array)) {
-                value = state.back().dom->at(meta.name);
+                T t = state.back().dom->at(meta.name);
+                value = t;
             } else {
                 auto& next = state.back();
-                value = next.dom->begin()[next.idx++];;
+                T t = next.dom->begin()[next.idx++];;
+                value = t;
             }
         }
 
