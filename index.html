@@ -91,7 +91,7 @@ $(function() {
 </ul>
 <h3>A brief introduction</h3>
 <p>At the core, <code>pupene</code> is built around serializers called <em>puppers</em>, and <code>pup</code> functions - a combined read/write function per serializable type.</p>
-<p>Include <code>&lt;pupene/binary.h&gt;</code> and/or <code>&lt;pupene/json.h&gt;</code> - when built with <code>PUPENE_BUILD_JSON=true</code> to access the appropiate puppers.</p>
+<p>Include <code>&lt;pupene/binary.h&gt;</code> and/or <code>&lt;pupene/json.h&gt;</code> (requires <code>-DPUPENE_BUILD_JSON=true</code>) to access the appropriate puppers.</p>
 <p>Refer to the <a href="https://junkdog.github.io/pupene">API docs</a> for more detailed documentation. The <a href="https://github.com/junkdog/pupene/tree/master/test">tests</a> may be of some interest too.</p>
 <p>Namespace <code>pupene</code> is omitted from example code, in the interest of brevity.</p>
 <h4>Pupper</h4>
@@ -123,7 +123,7 @@ $(function() {
 <p>Unless already added, The <code>conan-community</code> remote has to be added for the <code>Boost</code> test dependency to work:</p>
 <div class="fragment"><div class="line">conan remote add conan-community https://api.bintray.com/conan/conan-community/conan </div></div><!-- fragment --><h4>Using Conan</h4>
 <p>First-time setup:</p>
-<div class="fragment"><div class="line">conan install .. --build missing --install-folder _builds </div></div><!-- fragment --><p>Build project:</p>
+<div class="fragment"><div class="line">conan install . --build missing --install-folder _builds </div></div><!-- fragment --><p>Build project:</p>
 <div class="fragment"><div class="line">conan build . --build-folder _builds</div></div><!-- fragment --><h4>Using CMake:</h4>
 <p>CMake can call Conan by itself too; the commands are roughly equivalent to the ones given above.</p>
 <p>First-time setup:</p>
