@@ -4,7 +4,6 @@ set(CMAKE_CXX_CLANG_TIDY clang-tidy)
 include_directories(${header_path})
 
 set(headers
-    ${header_path}/pupene.h
     ${header_path}/pupper.h
     ${header_path}/pup-pupper.h
     ${header_path}/pup-core.h

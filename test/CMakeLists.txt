@@ -7,7 +7,6 @@ include_directories(
 set(source_path ${pupene_SOURCE_DIR}/src)
 
 set(headers
-    ${header_path}/pupene.h
     helpers.h
     testdata.h
     puptest-binary.h

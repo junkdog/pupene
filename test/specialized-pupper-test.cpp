@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "pupperdefs.h"
 #include "specialized-pupper.h"
-#include "pupene.h"
+#include "util.h"
 
 using pupene::EXPECTED_BEGIN_VEC2;
 using std::string_literals::operator""s;

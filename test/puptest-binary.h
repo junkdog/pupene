@@ -1,7 +1,7 @@
 #pragma once
 
 #include <gtest/gtest.h>
-#include "pupene.h"
+#include "binary.h"
 #include "helpers.h"
 
 using pupene::util::validate;
