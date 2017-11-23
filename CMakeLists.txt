@@ -12,6 +12,16 @@ MESSAGE(STATUS
 
 project(pupene VERSION 0.1.4)
 
+### feature config
+include(FeatureSummary)
+
+option(PUPENE_BUILD_JSON "JsonReader and JsonWriter" true)
+add_feature_info(json PUPENE_BUILD_JSON "JsonReader/Writer Puppers")
+
+option(PUPENE_BUILD_TESTS "Builds the tests" true)
+add_feature_info(tests PUPENE_BUILD_TESTS "Builds the tests")
+
+
 ### conan configuration
 if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
     set(conan_download_url "junkdog/cmake-conan")
@@ -75,14 +85,6 @@ else()
     )
 endif()
 
-### feature config
-include(FeatureSummary)
-
-option(PUPENE_BUILD_JSON "JsonReader and JsonWriter" true)
-add_feature_info(json PUPENE_BUILD_JSON "JsonReader/Writer Puppers")
-
-option(PUPENE_BUILD_TESTS "Builds the tests" true)
-add_feature_info(tests PUPENE_BUILD_TESTS "Builds the tests")
 
 feature_summary(WHAT ALL)
 

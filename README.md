@@ -35,7 +35,7 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
 ### A brief introduction 
 
 At the core, `pupene` is built around serializers called _puppers_, and `pup`
-functions - a combined read/write per serializable type.
+functions - a combined read/write function per serializable type.
 
 Including `<pupene/pupene.h>` gets everything except JSON support, which
 is done with `<pupene/json.h>` - when built with `PUPENE_BUILD_JSON=true`.
@@ -163,68 +163,65 @@ to_binary(numbers, std::cout);
 
 ### Building
 
-Set up project:
+At the moment, requirements are built even when they are not linked. Sorry.
+
+Unless already added, The `conan-community` remote has to be added for
+the `Boost` test dependency to work:
 
 ```bash
-cmake -H. -B_build \
-    -DCMAKE_INSTALL_PREFIX=_install \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DPUPENE_BUILD_TESTS=true
+conan remote add conan-community https://api.bintray.com/conan/conan-community/conan 
+```
+
+#### Using Conan
+
+First-time setup:
+
+```bash
+conan install .. --build missing --install-folder _builds 
 ```
 
 Build project:
+
 ```bash
-cmake --build _build
+conan build . --build-folder _builds
+```
+
+#### Using CMake:
+
+CMake can call Conan by itself too; the commands are roughly equivalent to the
+ones given above.
+
+First-time setup:
+
+```bash
+cmake -H. -B_builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=_install
+```
+
+Build project:
+
+```bash
+cmake --build _builds --target install -- -j 8
 ```
 
 Tests are run with:
 
 ```bash
-cmake --build _build  --target test    
+cmake --build _build  --target test
 ```
+... or run the tests with valgrind/memcheck:
 
-Tests can also run with valgrind/memcheck:
 ```bash
 cmake --build _build --target valgrind
 ```
 
-### Using
+#### CLion/CMake
 
-#### Hunter 
+To play nice with CLion, manually specify the compiler using *CMake Options* 
+under `Settings > Build, Execution, Deployment > CMake`, e.g.:
 
-[Hunter](https://github.com/ruslo/hunter) is a package manager for CMake.  
-
-```cmake
-### hunter init, top of CMakeLists.txt
-include("cmake/HunterGate.cmake")
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.19.99.tar.gz"
-    SHA1 "55ca271e9276b9973176e3f5a8c0d0dc25e46a53"
-    LOCAL # optional, will use cmake/Hunter/config.cmake 
-)
-
-### adding pupene
-hunter_add_package(pupene)
-find_package(pupene CONFIG REQUIRED)
-
-### ... later, when linking
-target_link_libraries(example_project PUBLIC pupene::pupene)
-
+```bash
+-DCMAKE_CXX_COMPILER=/usr/bin/clang++-5.0
 ```
-
-Build-time configuration can be customized in `cmake/Hunter/config.cmake`, for example:  
-
-```cmake
-hunter_config(
-    pupene
-    CMAKE_ARGS
-      PUPENE_BUILD_JSON=true
-)
-```
-
-#### Plain CMake
-TODO
- 
 
 ### Overarching TODO
 - Types currently require a default constructor to be eligble for `pup`.
