@@ -9,16 +9,22 @@ MESSAGE(STATUS
     "CMAKE_BUILD_TYPE: "
     ${CMAKE_BUILD_TYPE})
 
+
 project(pupene VERSION 0.1.4)
 
-if (EXISTS ${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-    include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-    conan_basic_setup(TARGETS)
-else()
-    message(SEND_ERROR "missing conanbuildinfo.cmake: ")
-    message(SEND_ERROR "    conan install . --build=missing --install-folder=<BUILD_FOLDER>")
+### conan configuration
+if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
+    set(conan_download_url "junkdog/cmake-conan")
+    message(STATUS "Downloading conan.cmake from https://github.com/${conan_download_url}")
+    file(DOWNLOAD "https://raw.githubusercontent.com/${conan_download_url}/master/conan.cmake"
+        "${CMAKE_BINARY_DIR}/conan.cmake")
 endif()
 
+include(${CMAKE_BINARY_DIR}/conan.cmake)
+conan_cmake_run(
+    CONANFILE conanfile.py
+    BASIC_SETUP CMAKE_TARGETS
+    BUILD missing)
 
 
 ### properties ###
@@ -87,4 +93,3 @@ if(${PUPENE_BUILD_TESTS})
     enable_testing()
     add_subdirectory(test)
 endif(${PUPENE_BUILD_TESTS})
-

@@ -49,12 +49,9 @@ class PupeneConan(ConanFile):
                       "gtest:shared=False", \
                       "gtest:no_gmock=True"
 
-    def config(self):
+    def config_options(self):
         self.settings.compiler.libcxx = "libstdc++11"
 
-    # def source(self):
-    #     self.run("git clone https://github.com/junkdog/pupene.git")
-    #     self.run("cd pupene && git checkout conenize")
 
     def build(self):
         cmake = CMake(self)
@@ -62,14 +59,10 @@ class PupeneConan(ConanFile):
         cmake.configure(source_dir=self.source_folder)
         cmake.build(target="install")
 
-        # Explicit way:
-        # args = ['-DCMAKE_INSTALL_PREFIX="%s"' % self.package_folder]
-        # self.run('cmake %s/pupene %s %s' % (self.source_folder, cmake.command_line, ' '.join(args)))
-        # self.run('cmake %s/pupene %s' % (self.source_folder, cmake.command_line))
-        # self.run("cmake --build . --target install %s" % cmake.build_config)
 
     def package(self):
         print("hello")
+
 
     def package_info(self):
         self.cpp_info.libs = ["pupene"]
