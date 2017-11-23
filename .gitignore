@@ -1,5 +1,5 @@
 .idea
-build
+test_package/build
 _build
 _builds
 _install
