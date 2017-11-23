@@ -19,8 +19,7 @@ const std::string raw_json = R"(
     "b": 0.5,
     "a": 1
   }
-}
-)";
+})";
 
 int main() {
     // load from json string
