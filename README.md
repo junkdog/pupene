@@ -37,8 +37,8 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
 At the core, `pupene` is built around serializers called _puppers_, and `pup`
 functions - a combined read/write function per serializable type.
 
-Including `<pupene/pupene.h>` gets everything except JSON support, which
-is done with `<pupene/json.h>` - when built with `PUPENE_BUILD_JSON=true`.
+Include `<pupene/binary.h>` and/or `<pupene/json.h>` - when built 
+with `PUPENE_BUILD_JSON=true` to access the appropiate puppers.
 
 Refer to the [API docs](https://junkdog.github.io/pupene) for more detailed
 documentation. The [tests][tests] may be of some interest too.
@@ -83,6 +83,8 @@ void pup(Pupper<P>& p,         // Pupper-agnostic - works with all
          const Meta& meta);    // name and Meta::Type
 ```
 
+**N.B.** For function resolution to work, `pup` functions must be declared in 
+a file which does not `#include` any puppers, implicitly or explicitly. 
 
 #### Example
 
@@ -103,6 +105,8 @@ struct FontReference {
 To make the types eligible, each requires its own pup function in the namespace `pupene:fns`.
 
 ```cpp
+#include <pupene/pup.h>
+
 namespace pupene::fns {               // required namespace
 
     template<typename P>
