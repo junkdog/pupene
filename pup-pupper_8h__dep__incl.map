@@ -1,11 +1,10 @@
 <map id="include/pup&#45;pupper.h" name="include/pup&#45;pupper.h">
-<area shape="rect" id="node2" href="$pup-core_8h.html" title="Helpers for writing pup functions. " alt="" coords="202,80,330,107"/>
-<area shape="rect" id="node3" href="$pup_8h.html" title="Core pup functions for working with STL types. " alt="" coords="145,155,244,181"/>
-<area shape="rect" id="node10" href="$binary-puppers_8h.html" title="Puppers for binary serialization. " alt="" coords="329,304,492,331"/>
-<area shape="rect" id="node4" href="$debug_8h.html" title="Introspection utilities. " alt="" coords="108,229,222,256"/>
-<area shape="rect" id="node6" href="$pupene_8h.html" title="Includes most headers except those related to JSON/optional support. " alt="" coords="218,453,338,480"/>
-<area shape="rect" id="node7" href="$util_8h.html" title="include/util.h" alt="" coords="210,304,304,331"/>
-<area shape="rect" id="node5" href="$debug_8cpp.html" title="src/debug.cpp" alt="" coords="26,304,130,331"/>
-<area shape="rect" id="node8" href="$binary_8h.html" title="Utility functions for serializing to/from binary. " alt="" coords="332,379,446,405"/>
-<area shape="rect" id="node9" href="$json_8h.html" title="Convert to/from JSON. " alt="" coords="206,379,308,405"/>
+<area shape="rect" id="node2" href="$pup-core_8h.html" title="Helpers for writing pup functions. " alt="" coords="168,80,296,107"/>
+<area shape="rect" id="node3" href="$pup_8h.html" title="Core pup functions for working with STL types. " alt="" coords="132,155,231,181"/>
+<area shape="rect" id="node9" href="$binary-puppers_8h.html" title="Puppers for binary serialization. " alt="" coords="219,229,381,256"/>
+<area shape="rect" id="node4" href="$debug_8h.html" title="Introspection utilities. " alt="" coords="30,229,143,256"/>
+<area shape="rect" id="node6" href="$util_8h.html" title="include/util.h" alt="" coords="134,304,229,331"/>
+<area shape="rect" id="node5" href="$debug_8cpp.html" title="src/debug.cpp" alt="" coords="5,304,109,331"/>
+<area shape="rect" id="node7" href="$binary_8h.html" title="Utility functions for serializing to/from binary. " alt="" coords="243,379,357,405"/>
+<area shape="rect" id="node8" href="$json_8h.html" title="Convert to/from JSON. " alt="" coords="117,379,219,405"/>
 </map>

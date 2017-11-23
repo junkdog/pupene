@@ -12,7 +12,6 @@ var searchData=
   ['pup_5fobject',['pup_object',['../namespacepupene_1_1fns.html#aaad6b8ed605ef66c25ef0517996c6863',1,'pupene::fns::pup_object()'],['../namespacepupene.html#ac8b8d9f8411192b14730c96aebdcd697a6691ee0f828b4698c206b0b656950465',1,'pupene::pup_object()']]],
   ['pup_5fobject_5fcontainer',['pup_object_container',['../namespacepupene_1_1fns.html#a866f6137ffc482c0e6ba456bb679c712',1,'pupene::fns']]],
   ['pupene',['pupene',['../namespacepupene.html',1,'']]],
-  ['pupene_2eh',['pupene.h',['../pupene_8h.html',1,'']]],
   ['pupper',['Pupper',['../classpupene_1_1Pupper.html',1,'pupene::Pupper&lt; Derived &gt;'],['../classpupene_1_1Pupper.html#ac9e262285690cbfaa9f24998f0d23e7d',1,'pupene::Pupper::Pupper()']]],
   ['pupper_2eh',['pupper.h',['../pupper_8h.html',1,'']]],
   ['pupper_3c_20binarypupper_3c_20stream_2c_20pupstream_20_3e_20_3e',['Pupper&lt; BinaryPupper&lt; Stream, PupStream &gt; &gt;',['../classpupene_1_1Pupper.html',1,'pupene']]],
