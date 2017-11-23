@@ -29,12 +29,11 @@ int main() {
     // save binary representation to file
     std::ofstream out{"font_ref.bin", std::ofstream::out};
     pupene::to_binary(fr, out);
-    out.close();
+    out.flush();
 
     // load from binary data - debug print pup-ing
     std::ifstream in{"font_ref.bin", std::ofstream::in};
     auto ignored_fr = pupene::from_binary<FontReference>(in, true);
-    in.close();
 
     return 0;
 }
