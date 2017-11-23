@@ -37,8 +37,8 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
 At the core, `pupene` is built around serializers called _puppers_, and `pup`
 functions - a combined read/write function per serializable type.
 
-Include `<pupene/binary.h>` and/or `<pupene/json.h>` - when built 
-with `PUPENE_BUILD_JSON=true` to access the appropiate puppers.
+Include `<pupene/binary.h>` and/or `<pupene/json.h>` (requires `-DPUPENE_BUILD_JSON=true`) to
+access the appropriate puppers.
 
 Refer to the [API docs](https://junkdog.github.io/pupene) for more detailed
 documentation. The [tests][tests] may be of some interest too.
@@ -181,7 +181,7 @@ conan remote add conan-community https://api.bintray.com/conan/conan-community/c
 First-time setup:
 
 ```bash
-conan install .. --build missing --install-folder _builds 
+conan install . --build missing --install-folder _builds 
 ```
 
 Build project:
