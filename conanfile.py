@@ -55,7 +55,6 @@ class PupeneConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        # cmake.configure(source_dir="%s/pupene" % self.source_folder, build_dir="./")
         cmake.configure(source_dir=self.source_folder)
         cmake.build(target="install")
 
