@@ -1,6 +1,6 @@
 #include <string>
 #include <gtest/gtest.h>
-#include "pupperdefs.h"
+#include "pup-fns.h"
 #include "puptest-binary.h"
 #include "testdata.h"
 

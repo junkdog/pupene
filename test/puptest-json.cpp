@@ -1,7 +1,7 @@
 #include <string>
 
 #include <gtest/gtest.h>
-#include "pupperdefs.h"
+#include "pup-fns.h"
 #include "puptest-json.h"
 #include "testdata.h"
 

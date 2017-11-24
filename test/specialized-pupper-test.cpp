@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "pupperdefs.h"
+#include "pup-fns.h"
 #include "specialized-pupper.h"
 #include "util.h"
 

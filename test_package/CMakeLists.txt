@@ -7,7 +7,7 @@ conan_basic_setup(TARGETS)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(example
-    pupdefs.h
+    pup-fns.h
     example.cpp)
 target_link_libraries(example CONAN_PKG::pupene)
 

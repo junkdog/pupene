@@ -75,14 +75,12 @@ if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
         -Widiomatic-parentheses
         -Wimplicit-fallthrough
         -Winconsistent-missing-override
-        -fno-omit-frame-pointer
-    )
-else()
+        -fno-omit-frame-pointer)
+else("${CMAKE_CXX_COMPILER_ID}" STREQUAL "gcc")
+    # FIXME proper
     message(WARNING "missing compiler-specific options")
     add_compile_options(
-        -std=c++1z
-        -fno-omit-frame-pointer
-    )
+        -fno-omit-frame-pointer)
 endif()
 
 

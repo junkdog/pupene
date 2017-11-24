@@ -10,7 +10,7 @@ set(headers
     helpers.h
     testdata.h
     puptest-binary.h
-    pupperdefs.h
+    pup-fns.h
     models.h
     specialized-pupper.h
 )

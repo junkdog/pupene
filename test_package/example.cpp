@@ -1,5 +1,5 @@
 #include <string>
-#include "pupdefs.h"
+#include "pup-fns.h"
 #include <pupene/json.h>
 #include <pupene/binary.h>
 #include <fstream>
