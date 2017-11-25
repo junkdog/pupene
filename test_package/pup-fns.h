@@ -6,9 +6,9 @@ struct Color {
 };
 
 struct FontReference {
-    std::string path;
-    Color inner;
-    Color outer;
+    std::string path = {};
+    Color inner = {};
+    Color outer = {};
 };
 
 namespace pupene::fns {

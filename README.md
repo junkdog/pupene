@@ -167,14 +167,13 @@ to_binary(numbers, std::cout);
 
 ### Building
 
-At the moment, requirements are built even when they are not linked. Sorry.
-
 Unless already added, The `conan-community` remote has to be added for
 the `Boost` test dependency to work:
 
 ```bash
 conan remote add conan-community https://api.bintray.com/conan/conan-community/conan 
 ```
+
 
 #### Using Conan
 

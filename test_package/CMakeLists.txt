@@ -10,3 +10,7 @@ add_executable(example
     pup-fns.h
     example.cpp)
 target_link_libraries(example CONAN_PKG::pupene)
+
+if(DEFINED CONAN_JSONFORMODERNCPP_ROOT)
+    target_compile_definitions(example PUBLIC HAS_JSON)
+endif()
