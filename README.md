@@ -191,14 +191,8 @@ conan build . --build-folder _builds
 
 #### Using CMake:
 
-CMake can call Conan by itself too; the commands are roughly equivalent to the
-ones given above.
-
-First-time setup:
-
-```bash
-cmake -H. -B_builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=_install
-```
+Once conan has built the project for the first time, CMake should work as
+expected.
 
 Build project:
 
