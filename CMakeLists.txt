@@ -10,7 +10,7 @@ MESSAGE(STATUS
     ${CMAKE_BUILD_TYPE})
 
 
-project(pupene VERSION 0.1.4)
+project(pupene VERSION 0.2.0)
 
 ### feature config
 include(FeatureSummary)
