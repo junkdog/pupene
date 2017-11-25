@@ -55,14 +55,17 @@ class PupeneConan(ConanFile):
 
     def build_requirements(self):
         if self.options.build_tests:
-            self.build_requires("Boost/1.64.0@conan/stable",
-                                "glm/0.9.8.5@g-truc/stable",
-                                "gtest/1.8.0@lasote/stable")
+            test_dependencies = ["Boost/1.64.0@conan/stable",
+                                 "glm/0.9.8.5@g-truc/stable",
+                                 "gtest/1.8.0@lasote/stable"]
+
+            for dep in test_dependencies:
+                self.build_requires(dep)
+
 
     def requirements(self):
         if self.options.json:
             self.requires("jsonformoderncpp/2.1.1@vthiery/stable")
-
 
 
     def build(self):
