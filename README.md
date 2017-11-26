@@ -19,9 +19,9 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
       dealing with third-party formats.
     - Zero dependencies, unless built with JSON support. 
 - Not limited to performing only pure serialization.
-  - Example using [imgui and pupene][imgui_example] to auto-generate editor UI:s at runtime. 
+  - Example using [imgui and pupene][pupene_imgui] to auto-generate editor UI:s at runtime. 
 
- [imgui_example]: https://github.com/junkdog/pupene_example
+ [pupene_imgui]: https://github.com/junkdog/pupene_imgui
  [article]: https://www.gamedev.net/articles/programming/general-and-gameplay-programming/pupping-a-method-for-serializing-data-r4485/
 
 
