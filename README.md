@@ -25,6 +25,22 @@ from Daniel Randle's [Pupping - a method for serializing data][article].
  [article]: https://www.gamedev.net/articles/programming/general-and-gameplay-programming/pupping-a-method-for-serializing-data-r4485/
 
 
+### Getting started
+
+Add [this conan remote](https://bintray.com/junkdog/conan):
+
+```bash
+conan remote add junkdog https://api.bintray.com/conan/junkdog/conan
+```
+
+In your project's conanfile.txt/py:
+
+```
+[requires]
+pupene/0.2.0@junkdog/stable
+```
+
+
 ### Links
 
 - Full API documentation, including this README: https://junkdog.github.io/pupene/index.html
